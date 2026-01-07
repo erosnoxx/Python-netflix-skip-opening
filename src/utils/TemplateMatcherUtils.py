@@ -9,7 +9,6 @@ class TemplateMatcher:
         if not os.path.exists(template_path):
             raise FileNotFoundError(f"Template image não encontrado no caminho: {template_path}")
 
-        print(f"Loading template image from {template_path}")
         template = cv2.imread(template_path, cv2.IMREAD_GRAYSCALE)
         if template is None:
             raise FileNotFoundError(f"Erro ao carregar a imagem no caminho: {template_path}")
